@@ -1,0 +1,45 @@
+<div class="grid-container">
+  <div class="grid-row">
+    <div class="grid-10">
+      <input #cityName type="text" class="input input__text-lg" placeholder="Search a UK City" />
+    </div>
+  </div>
+
+
+<div class="grid-row" *ngIf="isSearching">
+  <div class="grid-10 text-center searching-notification">
+
+      <h4>Searching ... </h4>
+
+  </div>
+</div>
+
+  <ng-container *ngIf="apiResponse == '404'; else elseTemplate">
+      <div class="grid-row">
+        <div class="grid-10 text-center">
+            <div class="alert alert-danger" role="alert">
+                <p>Please enter a valid UK city</p>
+
+            </div>
+        </div>
+      </div>
+
+  </ng-container>
+  <ng-template #elseTemplate>
+
+      <div class="grid-row weather-results">
+      <div class="grid-10 grid--lg-2" *ngFor="let res of apiResponse['list'] | filter:'12:00:00'">
+            <div class="card" style="margin:5px;">
+                <div class="card-body">
+                    <div class="icon icon{{res.weather[0].main}}"></div>
+                    <h5 class="card-title">{{res.main.temp}}&deg;C</h5>
+                    <p class="card-day">{{res.dt_txt | date: 'EEEE'}}</p>
+
+                </div>
+            </div>
+        </div>
+      </div>
+
+  </ng-template>
+</div>
+

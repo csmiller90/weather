@@ -1,0 +1,85 @@
+$primary: #2c374c;
+$accent: #c65379;
+$error: #b94040;
+
+.input {
+  background-color: transparent;
+  -webkit-appearance: none;
+  border: none;
+  border-bottom: 2px solid $accent;
+  outline: none;
+  color: white;
+  &__text {
+    &-lg {
+      font-size: 3em;
+      width: 100%;
+    }
+  }
+}
+
+.weather-results {
+  margin-top: 40px;
+}
+
+.searching-notification {
+  h4 {
+    color: white;
+  }
+}
+
+.alert {
+  &.alert-danger {
+    color: $error;
+  }
+}
+
+.card {
+  background-color: $accent;
+  padding: 15px;
+  .card-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    color: white;
+  }
+
+  h5.card-title {
+    margin: 0;
+    font-size: 1.5em;
+  }
+
+  .card-day {
+    font-size: 1.2em;
+  }
+}
+
+// weather icons
+
+.icon {
+  height: 100px;
+  width: 100px;
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.iconClouds {
+  background-image: url('../../assets/images/icons/cloudy.svg');
+}
+.iconRain {
+  background-image: url('../../assets/images/icons/rainy-6.svg');
+}
+.iconThunderstorm {
+  background-image: url('../../assets/images/icons/thunder.svg');
+}
+.iconClear {
+  background-image: url('../../assets/images/icons/day.svg');
+}
+.iconSnow {
+  background-image: url('../../assets/images/icons/snowy-6.svg');
+}
+.iconDrizzle {
+  background-image: url('../../assets/images/icons/rainy-2.svg');
+}
