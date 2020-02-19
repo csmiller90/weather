@@ -4,6 +4,10 @@
 Run `npm install` to install node modules.
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/` to view project.
 
+## Hosted
+The page can be viewed at the following URL:
+https://csmiller90.github.io/weather/
+
 ## Further development
 Given more time there are a number of features I would have liked to have implemented, my brain ran away with things so I had to reign him in a bit:
 
