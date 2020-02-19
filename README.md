@@ -9,10 +9,10 @@ Given more time there are a number of features I would have liked to have implem
 
 ### Features
 - An interactive map that can either be clicked or zooms to the area of the map that has been searched for.
-- Animations to make the flow and overall experience of the user better
+- Animations to make the flow and overall experience of the user better, like when a card is clicked, it flips to reveal additional information about the day.
 - Clicking on the cards for the next 5 days would reveal more information about the weather that day.
 - Use geolocation to get users location without them having to search for it
-- Similarly to Dark Sky app, display information in a more informative manner with more time to get into the depths of the information that is available from the API and how it can best be displayed.
+- Similarly to Dark Sky app, display information in a more informative manner with more time to get into the depths of the information that is available from the API and how it can best be displayed. Also perhaps make the current day more prominent with more information, and then show a summary of the days ahead and make them clickable for more information.
 
 ### Fixes
 - Would perhaps have came up with a better solution for displaying just 1 forecast per day from the 3 hourly forecasts returned by the API as the solution I went with was to filter the returned timestamp to and display the information if the time was 12pm, which worked as this would only occur once per day, but is not the most ideal solution.
