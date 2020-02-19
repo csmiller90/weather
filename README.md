@@ -1,27 +1,19 @@
 # WeatherApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
-
 ## Development server
+Run `npm install` to install node modules.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/` to view project.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Further development
+Given more time there are a number of features I would have liked to have implemented, my brain ran away with things so I had to reign him in a bit:
 
-## Code scaffolding
+### Features
+- An interactive map that can either be clicked or zooms to the area of the map that has been searched for.
+- Animations to make the flow and overall experience of the user better, like when a card is clicked, it flips to reveal additional information about the day.
+- Clicking on the cards for the next 5 days would reveal more information about the weather that day.
+- Use geolocation to get users location without them having to search for it
+- Similarly to Dark Sky app, display information in a more informative manner with more time to get into the depths of the information that is available from the API and how it can best be displayed. Also perhaps make the current day more prominent with more information, and then show a summary of the days ahead and make them clickable for more information.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Fixes
+- Would perhaps have came up with a better solution for displaying just 1 forecast per day from the 3 hourly forecasts returned by the API as the solution I went with was to filter the returned timestamp to and display the information if the time was 12pm, which worked as this would only occur once per day, but is not the most ideal solution.
+- Would have created more reusable components within Angular so as each one was not specific, this is more a lack of knowledge on my part as it is not something I have really worked with before, but is something I intend to learn and implement in my work as soon as possible.
