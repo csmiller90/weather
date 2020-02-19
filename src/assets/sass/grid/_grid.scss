@@ -1,0 +1,67 @@
+/**********
+  * custom grid
+ *********/
+
+// grid breakpoints
+$grid__bp-lg: 1024;
+$grid__bp-md: 768;
+$grid__bp-sm: 425;
+
+
+// grid columns
+$grid__cols: 10;
+
+.grid-container {
+  max-width: $grid__bp-lg * 1px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+
+.grid-row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+@for $i from 1 through $grid__cols {
+  .grid-#{$i} {
+    flex-basis: (100 / ($grid__cols / $i) ) * 1%;
+  }
+}
+
+// @media (min-width: $grid__bp-md * 1px) {
+//  @for $i from 1 through $grid__cols {
+//    .grid-md-#{$i} {
+//      flex-basis: (100 / ($grid__cols / $i) ) * 1%;
+//    }
+//  }
+// }
+
+
+// mixin for media queries
+@mixin create-query($bp) {
+  @if($bp == 0) {
+    @content;
+  } @else {
+    @media screen and (min-width: $bp *1px) {
+      @content;
+    }
+  }
+}
+
+@mixin create-col($modifier, $grid__cols, $bp) {
+  @include create-query($bp) {
+    @for $i from 1 through $grid__cols {
+      .grid-#{$modifier}-#{$i} {
+        flex-basis: (100 / ($grid__cols / $i) ) * 1%;
+      }
+    }
+  }
+}
+
+
+$map-grid-props: ('-sm': 0, '-md': $grid__bp-md, '-lg': $grid__bp-lg);
+@each $modifier , $bp in $map-grid-props {
+  @include create-col($modifier, $grid__cols, $bp);
+}
